@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+  body{
+    background-color: antiquewhite;
+  }
+</style>
+<body>
+   
+    <div class="container text-center">
+        <div class="row">
+          <div class="col-4">
+            
+          </div>
+          <div class="col-4">
+            <form>
+                <div class="mb-3">
+                  <label for="inputText" class="form-label">Họ và tên</label>
+                  <input type="text" class="form-control" id="inputText" placeholder="Họ tên đầy đủ..">
+                  <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputText" class="form-label">Cậu muốn gì nào???</label>
+                    <input type="text" class="form-control" id="inputText" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
+                  </div>
+                
+                  <button type="button" class="btn btn-outline-warning">Submit</button>
+              </form>
+          </div>
+          <div class="col-4">
+            
+          </div>
+        </div>
+      </div>
+      
+    </body>
+<script>
+
+    var btnSubmit = document.querySelector(".btn")
+    btnSubmit.addEventListener("click",function(){
+      var inputText = document.querySelector(".form-control")
+      console.log(inputText.value)
+      if(inputText.value == "Đỗ Linh Hương"){
+        var yes = confirm("Bạn chắc chưa?")
+        if(yes){
+          var yesAgain = confirm("Hỏi lần nữa, bạn chắc chưa?")
+          if(yesAgain){
+            alert("Nín!!! Không phải cái gì muốn là được!!!")
+            window.location.href = './slideshow.html'
+          }
+        }else{
+          alert("HIHI")
+        }
+        
+      }else{
+        confirm("Xin lỗi! Đây không phải chỗ của bạn")
+      }
+       
+    })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
